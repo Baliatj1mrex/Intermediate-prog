@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+float calculateSpeed(float distance, float time) {
+    if (time == 0) {
+        cout << "Time cannot be zero." << endl;
+        return 0;
+    }
+    return distance / time;
+}
+
+int main() {
+    float distance, time, speed;
+
+    
+    cout << "Enter the distance traveled (in kilometers): ";
+    cin >> distance;
+    cout << "Enter the time taken (in hours): ";
+    cin >> time;
+
+    
+    speed = calculateSpeed(distance, time);
+
+    if (speed != 0) {
+        cout << "The speed of the car is " << speed << " km/h." << endl;
+    }
+
+    return 0;
+}
